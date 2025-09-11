@@ -1,0 +1,11 @@
+services:
+  prodigiosovolcan:
+    build: .
+    container_name: prodigiosovolcan
+    ports:
+      - "9778:9778"
+    environment:
+      GOOGLE_CLIENT_ID: ${GOOGLE_CLIENT_ID}
+      GOOGLE_CLIENT_SECRET: ${GOOGLE_CLIENT_SECRET}
+      REMEMBER_ME_KEY: ${REMEMBER_ME_KEY}
+      APP_BASE_URL: ${APP_BASE_URL}
