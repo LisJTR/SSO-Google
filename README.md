@@ -46,21 +46,21 @@ APP_BASE_URL → http://localhost:9778
 
 - Empaquetar la aplicación en un JAR:
 
-  ```bash
+  ```
    mvn -DskipTests package 
-```
+  ```
 
 - Levantar el contenedor:
 
-   ```bash
+   ```
    docker compose up
-```
+  ```
 
 - Abrir en el navegador:
 
-   ```bash
+   ```
    http://localhost:9778
-```
+  ```
  
 
 ### 🧪 Flujo esperado
@@ -138,4 +138,5 @@ Aunque el frontal opcional expone https://app.localhost, el callback de OAuth si
 ### 📂 Estructura importante 
 
 - nginx/conf.d/app.conf: archivo con las variables y valores para redirigir la IP
+
 - nginx/certs: certificados locales necesarios para https
