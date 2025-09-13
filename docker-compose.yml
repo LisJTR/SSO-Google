@@ -9,3 +9,24 @@ services:
       GOOGLE_CLIENT_SECRET: ${GOOGLE_CLIENT_SECRET}
       REMEMBER_ME_KEY: ${REMEMBER_ME_KEY}
       APP_BASE_URL: ${APP_BASE_URL}
+    networks: 
+      - webnet   
+
+  nginx:
+    image: nginx:alpine
+    container_name: pv-nginx
+    profiles: ["extra"]  # profile para poder ejecutar el extra en local
+    depends_on:
+      - prodigiosovolcan
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./nginx/conf.d:/etc/nginx/conf.d:ro
+      - ./nginx/certs:/etc/nginx/certs:ro
+    networks: 
+      - webnet
+
+networks:
+  webnet:
+    driver: bridge
