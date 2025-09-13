@@ -89,7 +89,7 @@ APP_BASE_URL → http://localhost:9778
 
 ## SSO + Docker + Nginx + subdominio local + HTTPS
 
-Es creo un proxy inverso con Nginx que expone la app por https://app.localhost usando un certificado autofirmado.
+Se creo un proxy inverso con Nginx que expone la app por https://app.localhost usando un certificado autofirmado.
 
 - Proxy inverso: Nginx - prodigiosovolcan:9778
 
@@ -146,5 +146,6 @@ Aunque el frontal opcional expone https://app.localhost, el callback de OAuth si
 - nginx/conf.d/app.conf: archivo con las variables y valores para redirigir la IP
 
 - nginx/certs: certificados locales necesarios para https
+
 
 
