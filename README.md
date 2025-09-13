@@ -116,13 +116,13 @@ En C:\Windows\System32\drivers\etc\hosts, añadir:
 - Instalar el certificado .crt , ya creado en la carpeta nginx/certs como raíz de confianza, para evitar conflictos por privacidad en el navegador :
 
  1. Doble clic o clic derecho en el nginx/certs/app.localhost.crt 
- 2. Instalar certificado:
+    * Instalar certificado:
 	* Equipo local
 	* Colocar todos los certificados en el siguiente almacén
 	* Entidades de certificación raíz de confianza
 	* Finalizar
 	* Reinicia el navegador
- 3. Para arrancar en la terminal:
+ 2. Para arrancar en la terminal:
 
   ```
    docker compose down (solo si antes tenías la base levantada)
@@ -130,7 +130,7 @@ En C:\Windows\System32\drivers\etc\hosts, añadir:
    docker compose --profile extra up --build 
   ```
 
- 4. Abrir el navegador con: 
+ 3. Abrir el navegador con: 
 
   ```
    https://app.localhost
@@ -146,6 +146,7 @@ Aunque el frontal opcional expone https://app.localhost, el callback de OAuth si
 - nginx/conf.d/app.conf: archivo con las variables y valores para redirigir la IP
 
 - nginx/certs: certificados locales necesarios para https
+
 
 
 
