@@ -25,10 +25,14 @@ Para que funcione el login con Google debes crear tus propias credenciales en [G
 
 - Tipo de credencial: OAuth 2.0 Client ID:
 - En Google Cloud Console, añade como Redirect URI autorizado:
-  http://localhost:9778/login/oauth2/code/google
+ ```
+ http://localhost:9778/login/oauth2/code/google
+  ```
   Opción para ejecutarlo sin Docker:
-  http://localhost:8080/login/oauth2/code/google	
-
+   ```
+ http://localhost:8080/login/oauth2/code/google
+  ```
+  
 A continuación el archivo .env: 
 
 - En la raíz del proyecto, crea un archivo llamado .env
@@ -107,7 +111,9 @@ Es creo un proxy inverso con Nginx que expone la app por https://app.localhost u
 
 En C:\Windows\System32\drivers\etc\hosts, añadir:
 
-  `127.0.0.1 app.localhost`
+   ```
+   127.0.0.1 app.localhost
+  ```
 
 - Instalar el certificado .crt , ya creado en la carpeta nginx/certs como raíz de confianza, para evitar conflictos por privacidad en el navegador :
 
@@ -120,15 +126,17 @@ En C:\Windows\System32\drivers\etc\hosts, añadir:
 	* Reinicia el navegador
  3. Para arrancar en la terminal:
 
-  ```bash
+  ```
    docker compose down (solo si antes tenías la base levantada)
    mvn -DskipTests package 
    docker compose --profile extra up --build 
+  ```
 
  4. Abrir el navegador con: 
 
-  ```bash
+  ```
    https://app.localhost
+  ```
 
 ⚠️ Nota : 
 Aunque el frontal opcional expone https://app.localhost, el callback de OAuth sigue siendo http://localhost:9778/login/oauth2/code/google, porque Google solo permite localhost en HTTP para entornos locales. No es necesario registrar https://app.localhost/login/oauth2/code/google
@@ -140,3 +148,4 @@ Aunque el frontal opcional expone https://app.localhost, el callback de OAuth si
 - nginx/conf.d/app.conf: archivo con las variables y valores para redirigir la IP
 
 - nginx/certs: certificados locales necesarios para https
+
