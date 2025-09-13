@@ -4,7 +4,6 @@
 
 Este proyecto implementa un login con **Google SSO** usando **Spring Boot** y se entrega dockerizado para que pueda ejecutarse con un simple `docker compose up`.
 
----
 
 ### 🚀 Requisitos previos
 - [Java 17+](https://adoptium.net/) (solo si quieres ejecutar sin Docker)
@@ -12,7 +11,6 @@ Este proyecto implementa un login con **Google SSO** usando **Spring Boot** y se
 - [Docker](https://docs.docker.com/get-docker/)
 - [Docker Compose](https://docs.docker.com/compose/)
 
----
 
 ### ⚙️ Configuración de variables de entorno
 
@@ -148,4 +146,5 @@ Aunque el frontal opcional expone https://app.localhost, el callback de OAuth si
 - nginx/conf.d/app.conf: archivo con las variables y valores para redirigir la IP
 
 - nginx/certs: certificados locales necesarios para https
+
 
