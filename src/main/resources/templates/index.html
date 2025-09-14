@@ -2,12 +2,22 @@
 <html lang="es">
 	<head>
 		<title>Inicio de sesión</title>
-		<meta charset="UTF=8">
+		<meta charset="UTF-8">
 		<meta name="description" content="Inicio de sesión con SSO">
+		<link rel="stylesheet" href="/css/style.css">
 	</head>
 		<body>
-			<h1>Bienvenid@s"</h1>
-			<p>Inicia sesión para continiar</p>
-			<a href="/oauth2/authorization/google">Iniciar sesión con Google</a>
+		  <main class="center">
+		    <section class="card">
+		      <h1 class="title">Bienvenid@</h1>
+		      <p class="subtitle">Inicia sesión para continuar</p>
+		      <div class="actions">
+		        <a class="btn btn-google" href="/oauth2/authorization/google">
+		          <span class="g" aria-hidden="true"></span>
+		          Iniciar sesión con Google
+		        </a>
+		      </div>
+		    </section>
+		  </main>
 		</body>
 </html>

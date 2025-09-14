@@ -4,10 +4,17 @@
 		<title>Se saluda al dueño de la sesión</title>
 		<meta charset="UTF-8">
 		<meta name="description" content="Se muestra el nombre del dueño de la sesión iniciada">
+		<link rel="stylesheet" href="/css/style.css">
 	</head>
-		<body>
-			<h1>Bienvenido <span th:text="${name}">usuario</span></h1>
-			<p><a href="/logout"> Cerrar sesión</a></p>
-		</body>
-</html>
+	<body>
+	  <main class="center">
+	    <section class="card">
+	      <h1 class="title">Hola <span th:text="${name}"></span>!!</h1>
+	      <div class="actions">
+	        <a class="btn" href="/logout">Cerrar sesión</a>
+	      </div>
+	    </section>
+	  </main>
+	</body>
+	</html>
 		
